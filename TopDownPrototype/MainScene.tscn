@@ -1,0 +1,261 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bonfire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Ground/Minifantasy_ForgottenPlainsGrassMeadow.png" type="Texture" id=5]
+[ext_resource path="res://River.tscn" type="PackedScene" id=6]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 517.377, 300.398 )
+collision_layer = 13
+collision_mask = 7
+
+[node name="Enemy" parent="." groups=[
+"Burn",
+] instance=ExtResource( 2 )]
+
+[node name="Enemy2" parent="." groups=[
+"Burn",
+] instance=ExtResource( 2 )]
+position = Vector2( 218.979, 302.04 )
+
+[node name="Enemy3" parent="." groups=[
+"Burn",
+] instance=ExtResource( 2 )]
+position = Vector2( 720.649, 48.7757 )
+
+[node name="Tree" parent="." groups=[
+"Burn",
+] instance=ExtResource( 4 )]
+light_mask = 1
+position = Vector2( 148, 294 )
+collision_mask = 1
+motion/sync_to_physics = true
+
+[node name="Tree2" parent="." groups=[
+"Burn",
+] instance=ExtResource( 4 )]
+light_mask = 1
+position = Vector2( 729.99, 298.005 )
+collision_mask = 1
+
+[node name="Tree3" parent="." groups=[
+"Burn",
+] instance=ExtResource( 4 )]
+light_mask = 1
+position = Vector2( 430.986, 101.783 )
+collision_mask = 1
+
+[node name="Tree4" parent="." groups=[
+"Burn",
+] instance=ExtResource( 4 )]
+light_mask = 1
+position = Vector2( 434.405, 530 )
+collision_mask = 1
+
+[node name="Bonfire" parent="." groups=[
+"Fire",
+] instance=ExtResource( 3 )]
+position = Vector2( 434.709, 305.732 )
+
+[node name="Water" parent="." groups=[
+"VerticalWater",
+] instance=ExtResource( 6 )]
+z_index = -1
+collision_layer = 2
+
+[node name="Water2" parent="." groups=[
+"HorizontalWater",
+] instance=ExtResource( 6 )]
+position = Vector2( 568.538, 595.745 )
+rotation = 1.5708
+scale = Vector2( 0.806833, 1.073 )
+z_index = -1
+collision_layer = 2
+
+[node name="Grass" type="Sprite" parent="."]
+position = Vector2( 61.0292, 500.31 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass2" type="Sprite" parent="."]
+position = Vector2( 59.1414, 306.816 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass3" type="Sprite" parent="."]
+position = Vector2( 57.3596, 112.6 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass4" type="Sprite" parent="."]
+position = Vector2( 57.3596, -81.6473 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass5" type="Sprite" parent="."]
+position = Vector2( 173.403, 99.9864 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass6" type="Sprite" parent="."]
+position = Vector2( 177.608, 295.074 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass7" type="Sprite" parent="."]
+position = Vector2( 176.209, 491.003 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass8" type="Sprite" parent="."]
+position = Vector2( 177.749, 687.725 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass11" type="Sprite" parent="."]
+position = Vector2( 389.537, 573.951 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass12" type="Sprite" parent="."]
+position = Vector2( 508.592, 571.917 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass13" type="Sprite" parent="."]
+position = Vector2( 625.44, 571.917 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass14" type="Sprite" parent="."]
+position = Vector2( 736.309, 571.878 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass15" type="Sprite" parent="."]
+position = Vector2( 970.541, 497.879 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass16" type="Sprite" parent="."]
+position = Vector2( 853.425, 572.468 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass17" type="Sprite" parent="."]
+position = Vector2( 969.263, 299.217 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass19" type="Sprite" parent="."]
+position = Vector2( 733.426, 295.796 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass20" type="Sprite" parent="."]
+position = Vector2( 618.253, 296.417 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass21" type="Sprite" parent="."]
+position = Vector2( 500.785, 295.176 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass22" type="Sprite" parent="."]
+position = Vector2( 384.818, 294.829 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass23" type="Sprite" parent="."]
+position = Vector2( 288.074, 294.844 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass24" type="Sprite" parent="."]
+position = Vector2( 289.661, 99.5934 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass25" type="Sprite" parent="."]
+position = Vector2( 404.436, 104.992 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass26" type="Sprite" parent="."]
+position = Vector2( 514.098, 105.147 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass27" type="Sprite" parent="."]
+position = Vector2( 626.408, 103.955 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass28" type="Sprite" parent="."]
+position = Vector2( 733.015, 103.955 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass29" type="Sprite" parent="."]
+position = Vector2( 969.143, 103.955 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass30" type="Sprite" parent="."]
+position = Vector2( 985.633, 102.131 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass31" type="Sprite" parent="."]
+position = Vector2( 580.321, -56.8798 )
+rotation = 1.5708
+scale = Vector2( 5, 23.1743 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass10" type="Sprite" parent="."]
+position = Vector2( 294.423, 689.313 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Grass9" type="Sprite" parent="."]
+position = Vector2( 290.455, 489.301 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[connection signal="Bow" from="Player" to="Enemy" method="_on_Player_Bow"]

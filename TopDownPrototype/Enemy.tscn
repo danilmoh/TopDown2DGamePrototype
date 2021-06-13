@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/Enemy/poor-kid2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Enemy/poor-kid1.png" type="Texture" id=2]
+[ext_resource path="res://Enemy.cs" type="Script" id=3]
+[ext_resource path="res://Sprites/Fire/fire3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Fire/fire2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Fire/fire1.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 17.3679
+height = 13.2405
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemies",
+]]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+animation = "Walk"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Fire" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( -5.06639e-07, 8.02294 )
+scale = Vector2( 2.26833, 2.26833 )
+frames = SubResource( 3 )
+playing = true

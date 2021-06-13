@@ -1,0 +1,81 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/player/hero1.png" type="Texture" id=1]
+[ext_resource path="res://Player.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/player/hero11.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/player/hero6.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/player/hero2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/player/hero7.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/player/hero12.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/player/hero8.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/player/hero14.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Items/sword.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Items/bow.png" type="Texture" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.4695
+height = 17.8087
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "WalkUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "WalkDown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "IdleUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "IdleDown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 9
+collision_mask = 13
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+collision_mask = 9
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 3, 3 )
+frames = SubResource( 2 )
+animation = "IdleDown"
+
+[node name="Sword" type="Sprite" parent="AnimatedSprite"]
+visible = false
+position = Vector2( 0.000355959, 4.15265 )
+rotation = -2.35619
+texture = ExtResource( 10 )
+offset = Vector2( -4.35938, -4.35989 )
+
+[node name="Bow" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2.03204, 0.426677 )
+rotation = 0.785398
+scale = Vector2( -3.5, -3.5 )
+texture = ExtResource( 11 )
