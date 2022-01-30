@@ -1,3 +1,3 @@
 # TopDown2DGamePrototype
 Top-down Zelda-like game prototype made in Godot engine.
-![video](https://i.imgur.com/4QsoMQN.mp4)
+[![Demo](https://i.imgur.com/imCQp3g.gif)](https://youtu.be/i1WsjVjSN0Q)
